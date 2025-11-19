@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangun PC - Rakit PC</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="rakitpc.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>NgoPi</span>
+            </div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="rakitpc.html">Rakit PC</a>
+                <a href="rekomendasi.html">Rekomendasi</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+            <div class="nav-actions">
+            </div>
+        </div>
+    </nav>
+
+    <!-- BUILD SECTION -->
+    <div id="build" class="section active">
+        <div class="build-layout">
+            <div class="build-sidebar">
+                <!-- Budget Calculator -->
+                <div class="summary-card">
+                    <h3>Kalkulator Budget</h3>
+                    <div class="budget-inputs">
+                        <div class="budget-input-group">
+                            <label>Budget Minimum</label>
+                            <input type="number" id="budget-min" class="budget-input" value="0" min="0" step="1000000">
+                            <span class="budget-display" id="budget-min-display">Rp 0</span>
+                        </div>
+                        <div class="budget-input-group">
+                            <label>Budget Maximum</label>
+                            <input type="number" id="budget-max" class="budget-input" value="100000000" min="0" step="1000000">
+                            <span class="budget-display" id="budget-max-display">Rp 100.000.000</span>
+                        </div>
+                    </div>
+                    <div id="budget-status"></div>
+                </div>
+
+                <!-- Build Summary -->
+                <div class="summary-card">
+                    <h3>Ringkasan Build</h3>
+                    <div class="price-display">
+                        <span class="price-label">Total Harga</span>
+                        <span class="price-value">Rp <span id="total-price">0</span></span>
+                    </div>
+                    <div id="warning" class="alert alert-danger"></div>
+                    <div id="success" class="alert alert-success"></div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" onclick="openAnalysisModal()">Analisis Performa</button>
+                        <button class="btn btn-success" onclick="saveBuild()">Simpan Build</button>
+                        <button class="btn btn-secondary" onclick="printBuildSummary()">Print Ringkasan</button>
+                        <button class="btn btn-secondary" onclick="resetBuild()">Reset Semua</button>
+                    </div>
+                </div>
+
+                <!-- Saved Builds -->
+                <div class="summary-card">
+                    <h3>Build Tersimpan</h3>
+                    <div id="saved-builds-list"></div>
+                </div>
+            </div>
+
+            <!-- Main Build Area -->
+            <div class="build-main">
+                <div class="build-grid">
+                    <!-- CPU -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Processor (CPU)</label>
+                        </div>
+                        <select id="cpu-select" class="component-select">
+                            <option value="">Pilih CPU</option>
+                            <optgroup label="Intel Core i9 (Extreme Performance)">
+                                <option value="intel-i9-14900k" data-price="9500000" data-brand="intel">Core i9-14900K - Rp 9.500.000</option>
+                                <option value="intel-i9-14900kf" data-price="9200000" data-brand="intel">Core i9-14900KF - Rp 9.200.000</option>
+                                <option value="intel-i9-13900k" data-price="8500000" data-brand="intel">Core i9-13900K - Rp 8.500.000</option>
+                                <option value="intel-i9-13900kf" data-price="8200000" data-brand="intel">Core i9-13900KF - Rp 8.200.000</option>
+                            </optgroup>
+                            <optgroup label="Intel Core i7 (High Performance)">
+                                <option value="intel-i7-14700k" data-price="6800000" data-brand="intel">Core i7-14700K - Rp 6.800.000</option>
+                                <option value="intel-i7-14700kf" data-price="6500000" data-brand="intel">Core i7-14700KF - Rp 6.500.000</option>
+                                <option value="intel-i7-13700k" data-price="6000000" data-brand="intel">Core i7-13700K - Rp 6.000.000</option>
+                                <option value="intel-i7-13700kf" data-price="5700000" data-brand="intel">Core i7-13700KF - Rp 5.700.000</option>
+                            </optgroup>
+                            <optgroup label="Intel Core i5 (Mid-Range/Gaming)">
+                                <option value="intel-i5-14600k" data-price="4800000" data-brand="intel">Core i5-14600K - Rp 4.800.000</option>
+                                <option value="intel-i5-14600kf" data-price="4500000" data-brand="intel">Core i5-14600KF - Rp 4.500.000</option>
+                                <option value="intel-i5-13600k" data-price="4200000" data-brand="intel">Core i5-13600K - Rp 4.200.000</option>
+                                <option value="intel-i5-13600kf" data-price="3900000" data-brand="intel">Core i5-13600KF - Rp 3.900.000</option>
+                                <option value="intel-i5-14400" data-price="3200000" data-brand="intel">Core i5-14400 - Rp 3.200.000</option>
+                                <option value="intel-i5-14400f" data-price="2900000" data-brand="intel">Core i5-14400F - Rp 2.900.000</option>
+                                <option value="intel-i5-13400" data-price="3000000" data-brand="intel">Core i5-13400 - Rp 3.000.000</option>
+                                <option value="intel-i5-13400f" data-price="2700000" data-brand="intel">Core i5-13400F - Rp 2.700.000</option>
+                            </optgroup>
+                            <optgroup label="Intel Core i3 (Entry-Level/Budget)">
+                                <option value="intel-i3-14100" data-price="1800000" data-brand="intel">Core i3-14100 - Rp 1.800.000</option>
+                                <option value="intel-i3-14100f" data-price="1500000" data-brand="intel">Core i3-14100F - Rp 1.500.000</option>
+                                <option value="intel-i3-13100" data-price="1700000" data-brand="intel">Core i3-13100 - Rp 1.700.000</option>
+                                <option value="intel-i3-13100f" data-price="1400000" data-brand="intel">Core i3-13100F - Rp 1.400.000</option>
+                            </optgroup>
+                            <optgroup label="AMD Ryzen 9 (Extreme Performance)">
+                                <option value="amd-ryzen9-7950x3d" data-price="10500000" data-brand="amd">Ryzen 9 7950X3D - Rp 10.500.000</option>
+                                <option value="amd-ryzen9-7900x3d" data-price="9500000" data-brand="amd">Ryzen 9 7900X3D - Rp 9.500.000</option>
+                                <option value="amd-ryzen9-7950x" data-price="9800000" data-brand="amd">Ryzen 9 7950X - Rp 9.800.000</option>
+                                <option value="amd-ryzen9-7900x" data-price="7500000" data-brand="amd">Ryzen 9 7900X - Rp 7.500.000</option>
+                                <option value="amd-ryzen9-7900" data-price="6800000" data-brand="amd">Ryzen 9 7900 - Rp 6.800.000</option>
+                            </optgroup>
+                            <optgroup label="AMD Ryzen 7 (High Performance)">
+                                <option value="amd-ryzen7-7800x3d" data-price="7200000" data-brand="amd">Ryzen 7 7800X3D - Rp 7.200.000</option>
+                                <option value="amd-ryzen7-7700x" data-price="5800000" data-brand="amd">Ryzen 7 7700X - Rp 5.800.000</option>
+                                <option value="amd-ryzen7-7700" data-price="5200000" data-brand="amd">Ryzen 7 7700 - Rp 5.200.000</option>
+                            </optgroup>
+                            <optgroup label="AMD Ryzen 5 (Mid-Range/Gaming)">
+                                <option value="amd-ryzen5-7600x" data-price="4200000" data-brand="amd">Ryzen 5 7600X - Rp 4.200.000</option>
+                                <option value="amd-ryzen5-7600" data-price="3800000" data-brand="amd">Ryzen 5 7600 - Rp 3.800.000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Motherboard -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Motherboard</label>
+                        </div>
+                        <select id="mb-select" class="component-select">
+                            <option value="">Pilih Motherboard</option>
+                            <optgroup label="Intel Z790 (High-End)">
+                                <option value="asus-prime-z790-a-wifi" data-price="3200000" data-socket="intel">ASUS PRIME Z790-A WIFI - Rp 3.200.000</option>
+                                <option value="msi-pro-z790-p-wifi" data-price="2900000" data-socket="intel">MSI PRO Z790-P WIFI - Rp 2.900.000</option>
+                                <option value="gigabyte-z790-aorus-elite-ax" data-price="3500000" data-socket="intel">Gigabyte Z790 AORUS ELITE AX - Rp 3.500.000</option>
+                                <option value="asrock-z790-pro-rs" data-price="2700000" data-socket="intel">ASRock Z790 PRO RS - Rp 2.700.000</option>
+                            </optgroup>
+                            <optgroup label="Intel B760 (Mid-Range)">
+                                <option value="asus-tuf-b760-plus-wifi" data-price="2200000" data-socket="intel">ASUS TUF GAMING B760-PLUS WIFI - Rp 2.200.000</option>
+                                <option value="msi-pro-b760m-a-wifi" data-price="1900000" data-socket="intel">MSI PRO B760M-A WIFI - Rp 1.900.000</option>
+                                <option value="gigabyte-b760m-ds3h" data-price="1700000" data-socket="intel">Gigabyte B760M DS3H - Rp 1.700.000</option>
+                            </optgroup>
+                            <optgroup label="AMD X670E (High-End)">
+                                <option value="msi-mpg-x670e-carbon-wifi" data-price="4200000" data-socket="amd">MSI MPG X670E CARBON WIFI - Rp 4.200.000</option>
+                                <option value="asus-rog-crosshair-x670e-hero" data-price="5500000" data-socket="amd">ASUS ROG CROSSHAIR X670E HERO - Rp 5.500.000</option>
+                            </optgroup>
+                            <optgroup label="AMD B650 (Mid-Range)">
+                                <option value="asus-rog-strix-b650-a-gaming-wifi" data-price="3200000" data-socket="amd">ASUS ROG STRIX B650-A GAMING WIFI - Rp 3.200.000</option>
+                                <option value="msi-mag-b650-tomahawk-wifi" data-price="2900000" data-socket="amd">MSI MAG B650 TOMAHAWK WIFI - Rp 2.900.000</option>
+                                <option value="gigabyte-b650-gaming-x-ax" data-price="2600000" data-socket="amd">Gigabyte B650 GAMING X AX - Rp 2.600.000</option>
+                                <option value="asrock-b650-live-mixer" data-price="2400000" data-socket="amd">ASRock B650 LIVE MIXER - Rp 2.400.000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- (Seluruh komponen lain disertakan seperti pada file index.html) -->
+                    <!-- RAM -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Memory (RAM)</label>
+                        </div>
+                        <select id="ram-select" class="component-select">
+                            <option value="">Pilih RAM</option>
+                            <optgroup label="DDR5 32GB (High Performance)">
+                                <option value="gskill-trident-z5-rgb-32gb" data-price="2600000">G.SKILL Trident Z5 RGB 32GB - Rp 2.600.000</option>
+                                <option value="corsair-vengeance-rgb-ddr5-32gb" data-price="2500000">Corsair Vengeance RGB DDR5 32GB - Rp 2.500.000</option>
+                                <option value="kingston-fury-beast-ddr5-32gb" data-price="2300000">Kingston FURY Beast DDR5 32GB - Rp 2.300.000</option>
+                                <option value="teamgroup-tforce-delta-rgb-ddr5-32gb" data-price="2400000">Teamgroup T-Force Delta RGB DDR5 32GB - Rp 2.400.000</option>
+                                <option value="gskill-flare-x5-32gb" data-price="2450000">G.SKILL Flare X5 32GB - Rp 2.450.000</option>
+                            </optgroup>
+                            <optgroup label="DDR5 16GB (Mid-Range)">
+                                <option value="gskill-trident-z5-rgb-16gb" data-price="1450000">G.SKILL Trident Z5 RGB 16GB - Rp 1.450.000</option>
+                                <option value="corsair-vengeance-rgb-ddr5-16gb" data-price="1400000">Corsair Vengeance RGB DDR5 16GB - Rp 1.400.000</option>
+                                <option value="kingston-fury-beast-ddr5-16gb" data-price="1300000">Kingston FURY Beast DDR5 16GB - Rp 1.300.000</option>
+                                <option value="teamgroup-tforce-delta-rgb-ddr5-16gb" data-price="1350000">Teamgroup T-Force Delta RGB DDR5 16GB - Rp 1.350.000</option>
+                                <option value="gskill-flare-x5-16gb" data-price="1400000">G.SKILL Flare X5 16GB - Rp 1.400.000</option>
+                            </optgroup>
+                            <optgroup label="DDR4 32GB (Budget)">
+                                <option value="gskill-ripjaws-v-32gb" data-price="1600000">G.SKILL Ripjaws V 32GB - Rp 1.600.000</option>
+                                <option value="corsair-vengeance-lpx-32gb" data-price="1550000">Corsair Vengeance LPX 32GB - Rp 1.550.000</option>
+                                <option value="kingston-fury-renegade-rgb-32gb" data-price="1700000">Kingston FURY Renegade RGB 32GB - Rp 1.700.000</option>
+                                <option value="teamgroup-tforce-delta-rgb-32gb" data-price="1650000">Teamgroup T-Force Delta RGB 32GB - Rp 1.650.000</option>
+                                <option value="crucial-ballistix-32gb" data-price="1500000">Crucial Ballistix 32GB - Rp 1.500.000</option>
+                            </optgroup>
+                            <optgroup label="DDR4 16GB (Budget)">
+                                <option value="gskill-ripjaws-v-16gb" data-price="850000">G.SKILL Ripjaws V 16GB - Rp 850.000</option>
+                                <option value="corsair-vengeance-lpx-16gb" data-price="800000">Corsair Vengeance LPX 16GB - Rp 800.000</option>
+                                <option value="kingston-fury-renegade-rgb-16gb" data-price="900000">Kingston FURY Renegade RGB 16GB - Rp 900.000</option>
+                                <option value="teamgroup-tforce-delta-rgb-16gb" data-price="850000">Teamgroup T-Force Delta RGB 16GB - Rp 850.000</option>
+                                <option value="crucial-ballistix-16gb" data-price="780000">Crucial Ballistix 16GB - Rp 780.000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- VGA -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Graphics Card (GPU)</label>
+                        </div>
+                        <select id="vga-select" class="component-select">
+                            <option value="">Pilih GPU</option>
+                            <optgroup label="High-End (4K Gaming)">
+                                <option value="nvidia-rtx-4090" data-price="32000000">NVIDIA RTX 4090 - Rp 32.000.000</option>
+                                <option value="amd-rx-7900-xtx" data-price="22000000">AMD Radeon RX 7900 XTX - Rp 22.000.000</option>
+                                <option value="nvidia-rtx-4080-super" data-price="20000000">NVIDIA RTX 4080 SUPER - Rp 20.000.000</option>
+                                <option value="amd-rx-7900-xt" data-price="16000000">AMD Radeon RX 7900 XT - Rp 16.000.000</option>
+                            </optgroup>
+                            <optgroup label="Mid-Range (1440p Gaming)">
+                                <option value="nvidia-rtx-4070-ti-super" data-price="13500000">NVIDIA RTX 4070 Ti SUPER - Rp 13.500.000</option>
+                                <option value="amd-rx-7800-xt" data-price="9500000">AMD Radeon RX 7800 XT - Rp 9.500.000</option>
+                                <option value="nvidia-rtx-4070-super" data-price="10500000">NVIDIA RTX 4070 SUPER - Rp 10.500.000</option>
+                                <option value="amd-rx-7700-xt" data-price="7500000">AMD Radeon RX 7700 XT - Rp 7.500.000</option>
+                            </optgroup>
+                            <optgroup label="Entry-Level (1080p Gaming)">
+                                <option value="nvidia-rtx-4060-ti" data-price="7200000">NVIDIA RTX 4060 Ti - Rp 7.200.000</option>
+                                <option value="amd-rx-7600" data-price="5200000">AMD Radeon RX 7600 - Rp 5.200.000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Storage -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Storage (SSD)</label>
+                        </div>
+                        <select id="storage-select" class="component-select">
+                            <option value="">Pilih SSD</option>
+                            <optgroup label="PCIe Gen 4.0 NVMe (High-Speed)">
+                                <option value="samsung-990-pro-1tb" data-price="2100000">Samsung 990 Pro 1TB - Rp 2.100.000</option>
+                                <option value="wd-black-sn850x-1tb" data-price="2000000">WD Black SN850X 1TB - Rp 2.000.000</option>
+                                <option value="kingston-fury-renegade-1tb" data-price="1950000">Kingston FURY Renegade 1TB - Rp 1.950.000</option>
+                                <option value="crucial-p5-plus-1tb" data-price="1750000">Crucial P5 Plus 1TB - Rp 1.750.000</option>
+                                <option value="gigabyte-aorus-gen4-7000s-1tb" data-price="1850000">Gigabyte AORUS Gen4 7000s 1TB - Rp 1.850.000</option>
+                            </optgroup>
+                            <optgroup label="PCIe Gen 3.0 NVMe (Budget)">
+                                <option value="samsung-970-evo-plus-1tb" data-price="1400000">Samsung 970 EVO Plus 1TB - Rp 1.400.000</option>
+                                <option value="kingston-nv2-1tb" data-price="950000">Kingston NV2 1TB - Rp 950.000</option>
+                                <option value="wd-blue-sn570-1tb" data-price="1000000">WD Blue SN570 1TB - Rp 1.000.000</option>
+                                <option value="crucial-p3-1tb" data-price="1050000">Crucial P3 1TB - Rp 1.050.000</option>
+                                <option value="teamgroup-mp34-1tb" data-price="1100000">Teamgroup MP34 1TB - Rp 1.100.000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- PSU -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Power Supply (PSU)</label>
+                        </div>
+                        <select id="psu-select" class="component-select">
+                            <option value="">Pilih PSU</option>
+                            <optgroup label="Entry Level (550W-600W)">
+                                <option value="fsp-hyper-k-550w" data-price="550000">FSP Hyper K 550W - Rp 550.000</option>
+                                <option value="fsp-hyper-k-600w" data-price="650000">FSP Hyper K 600W - Rp 650.000</option>
+                            </optgroup>
+                            <optgroup label="Budget (650W-750W)">
+                                <option value="cooler-master-mwe-bronze-v2-650w" data-price="850000">Cooler Master MWE Bronze V2 650W - Rp 850.000</option>
+                                <option value="cooler-master-mwe-bronze-v2-750w" data-price="1000000">Cooler Master MWE Bronze V2 750W - Rp 1.000.000</option>
+                                <option value="deepcool-pk-d-650w" data-price="1200000">DeepCool PK-D 650W - Rp 1.200.000</option>
+                                <option value="deepcool-pq-m-750w" data-price="1400000">DeepCool PQ-M 750W - Rp 1.400.000</option>
+                            </optgroup>
+                            <optgroup label="Mid-Range (750W-850W)">
+                                <option value="seasonic-focus-gm-750w" data-price="1650000">Seasonic Focus GM 750W - Rp 1.650.000</option>
+                                <option value="seasonic-focus-gm-850w" data-price="2000000">Seasonic Focus GM 850W - Rp 2.000.000</option>
+                                <option value="corsair-rm750e-750w" data-price="1750000">Corsair RM750e 750W (ATX 3.0) - Rp 1.750.000</option>
+                                <option value="msi-mag-a850gl-pcie5-850w" data-price="1900000">MSI MAG A850GL PCIE5 850W - Rp 1.900.000</option>
+                            </optgroup>
+                            <optgroup label="High-End (850W-1000W)">
+                                <option value="evga-supernova-g6-850w" data-price="2200000">EVGA SuperNOVA G6 850W - Rp 2.200.000</option>
+                                <option value="evga-supernova-g6-1000w" data-price="2700000">EVGA SuperNOVA G6 1000W - Rp 2.700.000</option>
+                                <option value="asus-rog-strix-aura-850w" data-price="2800000">ASUS ROG STRIX Aura 850W - Rp 2.800.000</option>
+                                <option value="asus-rog-strix-aura-1000w" data-price="3300000">ASUS ROG STRIX Aura 1000W - Rp 3.300.000</option>
+                                <option value="corsair-rm1000x-shift-1000w" data-price="3500000">Corsair RM1000x SHIFT 1000W - Rp 3.500.000</option>
+                            </optgroup>
+                            <optgroup label="Premium (1200W+)">
+                                <option value="seasonic-prime-tx-1200w" data-price="6000000">Seasonic PRIME TX 1200W - Rp 6.000.000</option>
+                                <option value="seasonic-prime-tx-1600w" data-price="8500000">Seasonic PRIME TX 1600W - Rp 8.500.000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Case -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Case</label>
+                        </div>
+                        <select id="case-select" class="component-select">
+                            <option value="">Pilih Case</option>
+                            <option value="corsair-4000d" data-price="1200000">Corsair 4000D Airflow - Rp 1.200.000</option>
+                            <option value="nzxt-h510" data-price="950000">NZXT H510 - Rp 950.000</option>
+                            <option value="lian-li-lancool-ii-mesh" data-price="1500000">Lian Li LANCOOL II Mesh - Rp 1.500.000</option>
+                            <option value="fractal-meshify-c" data-price="1100000">Fractal Meshify C - Rp 1.100.000</option>
+                            <option value="basic" data-price="350000">Basic Case - Rp 350.000</option>
+                        </select>
+                    </div>
+
+                    <!-- Cooling -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Sistem Pendingin</label>
+                        </div>
+                        <select id="cooling-select" class="component-select">
+                            <option value="">Pilih Cooling</option>
+                            <optgroup label="Air Cooler (Budget-Friendly)">
+                                <option value="noctua-nh-d15" data-price="1400000">Noctua NH-D15 - Rp 1.400.000</option>
+                                <option value="deepcool-ak620" data-price="750000">DeepCool AK620 - Rp 750.000</option>
+                                <option value="thermalright-phantom-spirit-120-se" data-price="550000">Thermalright Phantom Spirit 120 SE - Rp 550.000</option>
+                                <option value="bequiet-dark-rock-pro-4" data-price="1250000">be quiet! Dark Rock Pro 4 - Rp 1.250.000</option>
+                                <option value="cooler-master-hyper-212-halo" data-price="450000">Cooler Master Hyper 212 Halo - Rp 450.000</option>
+                            </optgroup>
+                            <optgroup label="AIO Liquid Cooler (High Performance)">
+                                <option value="arctic-liquid-freezer-ii-360" data-price="1900000">Arctic Liquid Freezer II 360mm - Rp 1.900.000</option>
+                                <option value="lian-li-galahad-ii-trinity-360" data-price="2200000">Lian Li Galahad II Trinity 360mm - Rp 2.200.000</option>
+                                <option value="deepcool-ls720-se-360" data-price="1750000">DeepCool LS720 SE 360mm - Rp 1.750.000</option>
+                                <option value="nzxt-kraken-360" data-price="2400000">NZXT Kraken 360mm - Rp 2.400.000</option>
+                                <option value="corsair-icue-h150i-elite-360" data-price="2600000">Corsair iCUE H150i ELITE 360mm - Rp 2.600.000</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- OS -->
+                    <div class="component-card">
+                        <div class="component-header">
+                            <label>Operating System</label>
+                        </div>
+                        <select id="os-select" class="component-select">
+                            <option value="">Pilih OS</option>
+                            <option value="windows-11-home" data-price="2100000">Windows 11 Home - Rp 2.100.000</option>
+                            <option value="windows-11-pro" data-price="3200000">Windows 11 Pro - Rp 3.200.000</option>
+                            <option value="windows-10-home" data-price="1800000">Windows 10 Home - Rp 1.800.000</option>
+                            <option value="windows-10-pro" data-price="2900000">Windows 10 Pro - Rp 2.900.000</option>
+                            <option value="linux" data-price="0">Linux (Gratis) - Rp 0</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PERFORMANCE ANALYSIS MODAL -->
+        <div id="analysis-modal" class="modal">
+            <div class="modal-overlay" onclick="closeAnalysisModal()"></div>
+            <div class="modal-container">
+                <div class="modal-header">
+                    <h2>Analisis Performa</h2>
+                    <span class="modal-close" onclick="closeAnalysisModal()">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-subtitle">Estimasi benchmark berdasarkan komponen yang dipilih</p>
+                    
+                    <div class="benchmark-grid">
+                        <div class="benchmark-card">
+                            <h4>PCMark 10</h4>
+                            <div class="benchmark-score" id="pcmark-score">-</div>
+                            <p class="benchmark-desc">Sistem Keseluruhan</p>
+                        </div>
+
+                        <div class="benchmark-card">
+                            <h4>Geekbench 5</h4>
+                            <div class="benchmark-score" id="geekbench-score">-</div>
+                            <p class="benchmark-desc">CPU Multi-Core</p>
+                        </div>
+
+                        <div class="benchmark-card">
+                            <h4>Cinebench R23</h4>
+                            <div class="benchmark-score" id="cinebench-score">-</div>
+                            <p class="benchmark-desc">CPU Rendering</p>
+                        </div>
+
+                        <div class="benchmark-card">
+                            <h4>3DMark Time Spy</h4>
+                            <div class="benchmark-score" id="3dmark-score">-</div>
+                            <p class="benchmark-desc">Performa Gaming</p>
+                        </div>
+                    </div>
+
+                    <div class="performance-notes">
+                        <p><strong>Catatan:</strong> Skor benchmark adalah estimasi dan dapat bervariasi tergantung konfigurasi sistem, driver, dan kondisi penggunaan.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ngoprek Kompi</h4>
+                <p>Platform simulator perakitan PC terpercaya untuk membantu Anda merakit PC impian dengan mudah dan profesional.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="rakitpc.html">Rakit PC</a></li>
+                    <li><a href="rekomendasi.html">Rekomendasi</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul class="kontak">
+                    <li><span class="ikon">📞</span> +62 851 7956 2922</li>
+                    <li><span class="ikon">✉️</span> nedazafa@gmail.com</li>
+                    <li><span class="ikon">📍</span> Jalan Pattimura No. 3, Kelurahan Sumbang, Bojonegoro, Jawa Timur</li>
+                </ul>
+                <style>
+                .kontak .ikon {
+                    filter: hue-rotate(270deg) saturate(3); 
+                }
+                </style>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NgoPi. Dikembangkan oleh NeDazafa. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="language-switcher.js"></script>
+    <script src="utils.js"></script>
+    <script src="component-images.js"></script> 
+    <script src="component-preview.js"></script> 
+    <script src="builder.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Wait for other initializations to complete
+            setTimeout(function() {
+                initializeComponentPreviews();
+                // Optional: Preload images for better UX
+                // preloadComponentImages();
+            }, 500);
+        });
+    </script>
+</body>
+</html>

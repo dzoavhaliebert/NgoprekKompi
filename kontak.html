@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangun PC - Kontak</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="kontak.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>NgoPi</span>
+            </div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="rakitpc.html">Rakit PC</a>
+                <a href="rekomendasi.html">Rekomendasi</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+            <div class="nav-actions">
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTACT SECTION -->
+    <div id="contact" class="section active">
+        <div class="section-header">
+            <h2>Hubungi Kami</h2>
+            <p>Kami siap membantu Anda merakit PC impian</p>
+        </div>
+
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info-section">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h3>Telepon / WhatsApp</h3>
+                    <p class="contact-detail">+62 812-3456-7890</p>
+                    <p class="contact-subtext">Senin - Sabtu, 09:00 - 18:00 WIB</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="contact-detail">nedazafa@gmail.com</p>
+                    <p class="contact-subtext">Respon dalam 1x24 jam</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Alamat</h3>
+                    <p class="contact-detail">Jalan Pattimura No. 3, Kelurahan Sumbang,<br>Bojonegoro,Jawa Timur</p>
+                    <p class="contact-subtext">Indonesia</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </div>
+                    <h3>Instagram</h3>
+                    <p class="contact-detail">@nedazafa_87</p>
+                    <p class="contact-subtext">Follow untuk tips & update</p>
+                </div>
+            </div>
+
+            <!-- Suggestion Form -->
+            <div class="suggestion-form-section">
+                <div class="form-card">
+                    <h3>Kotak Saran</h3>
+                    <p class="form-description">Berikan saran, kritik, atau pertanyaan Anda kepada kami</p>
+                    
+                    <form id="suggestion-form" class="suggestion-form">
+                        <div class="form-group">
+                            <label for="name">Nama Lengkap</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Masukkan nama Anda" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="nama@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Nomor Telepon (Opsional)</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="+62 812-xxxx-xxxx">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Kategori</label>
+                            <select id="category" name="category" class="form-control" required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="saran">Saran</option>
+                                <option value="kritik">Kritik</option>
+                                <option value="pertanyaan">Pertanyaan</option>
+                                <option value="bug">Laporkan Bug</option>
+                                <option value="lainnya">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" class="form-control" rows="6" placeholder="Tulis pesan Anda di sini..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            Kirim Pesan
+                        </button>
+                    </form>
+
+                    <div id="form-success" class="form-message success-message" style="display: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                        <p>Terima kasih! Pesan Anda telah berhasil dikirim.</p>
+                    </div>
+
+                    <div id="form-error" class="form-message error-message" style="display: none;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="15" y1="9" x2="9" y2="15"/>
+                            <line x1="9" y1="9" x2="15" y2="15"/>
+                        </svg>
+                        <p>Maaf, terjadi kesalahan. Silakan coba lagi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ngoprek Kompi</h4>
+                <p>Platform simulator perakitan PC terpercaya untuk membantu Anda merakit PC impian dengan mudah dan profesional.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul class="kontak">
+                    <li><span class="ikon">📞</span> +62 851 7956 2922</li>
+                    <li><span class="ikon">✉️</span> nedazafa@gmail.com</li>
+                    <li><span class="ikon">📍</span> Jalan Pattimura No. 3, Kelurahan Sumbang, Bojonegoro, Jawa Timur</li>
+                </ul>
+                <style>
+                .kontak .ikon {
+                    filter: hue-rotate(270deg) saturate(3); 
+                }
+                </style>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NgoPi. Dikembangkan oleh NeDazafa. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="language-switcher.js"></script>
+    <script src="utils.js"></script>
+    <script src="builder.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

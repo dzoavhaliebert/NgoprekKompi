@@ -1,0 +1,217 @@
+/* ============================================
+   REKOMENDASI.CSS - CSS KHUSUS UNTUK REKOMENDASI PAGE
+   ============================================ */
+
+/* ============================================
+   SECTION HEADER
+   ============================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-top: 8rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--text-gray);
+}
+
+/* ============================================
+   PRESET CARDS
+   ============================================ */
+.preset-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 4rem;
+}
+
+.preset-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid transparent;
+}
+
+.preset-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
+}
+
+.preset-image {
+    margin-bottom: 1.5rem;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.component-illustration {
+    width: 100%;
+    height: 100%;
+}
+
+.preset-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.preset-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.preset-specs {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.preset-specs p {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    margin-bottom: 0.6rem;
+}
+
+.preset-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-light);
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.btn-preset {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-preset:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+/* ============================================
+   COMPONENT GUIDE
+   ============================================ */
+.component-guide-section {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.component-guide-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.component-guide-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: var(--shadow-lg);
+}
+
+.component-icon-large {
+    margin: 0 auto 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.component-guide-card h3 {
+    font-size: 1.2rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.component-guide-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - REKOMENDASI
+   ============================================ */
+@media (max-width: 768px) {
+    .section-header {
+        padding-top: 6rem;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .preset-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem 2rem;
+    }
+
+    .components-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .preset-card {
+        padding: 1.5rem;
+    }
+
+    .preset-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .preset-price {
+        font-size: 1.3rem;
+    }
+}
