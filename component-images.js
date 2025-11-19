@@ -128,11 +128,11 @@ const ComponentImages = {
     
     // Case Images
     case: {
-        'corsair-4000d': 'https://github.com/dzoavhaliebert/NgoprekKompi/blob/main/images/CASE/BASIC%20CASE.jpg?raw=true',
-        'nzxt-h510': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/NZXT%20H510.jpg',
-        'lian-li-lancool-ii-mesh': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/LIAN%20LI%20LANCOOL%20II%20MESH.jpg',
-        'fractal-meshify-c': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/FRACTAL%20MESHIFY.jpg',
-        'basic': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/BASIC%20CASE.jpg'
+        'corsair-4000d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/CORSAIR%204000D%20AIRFLOW.jpg',
+        'nzxt-h510': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/NZXT%20H510.jpg',
+        'lian-li-lancool-ii-mesh': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/LIAN%20LI%20LANCOOL%20II%20MESH.jpg',
+        'fractal-meshify-c': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/FRACTAL%20MESHIFY.jpg',
+        'basic': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/BASIC%20CASE.jpg.jpg'
     },
     
     // Cooling Images
