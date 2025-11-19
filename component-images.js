@@ -4,36 +4,36 @@
 const ComponentImages = {
     // CPU Images
     cpu: {
-        'intel-i9-14900k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I9-14900K.jpg',
-        'intel-i9-14900kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I9-14900K.jpg',
-        'intel-i9-13900k': '/https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I9-13900K.jpg',
-        'intel-i9-13900kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I9-13900K.jpg',
-        'intel-i7-14700k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I7-14700K.jpg',
-        'intel-i7-14700kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I7-14700K.jpg',
-        'intel-i7-13700k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I7-13700K.jpg',
-        'intel-i7-13700kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I7-13700K.jpg',
-        'intel-i5-14600k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
-        'intel-i5-14600kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
-        'intel-i5-13600k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-13.jpg',
-        'intel-i5-13600kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-13.jpg',
-        'intel-i5-14400': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
-        'intel-i5-14400f': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
-        'intel-i5-13400': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-13.jpg',
-        'intel-i5-13400f': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/CORE%20I5-13.jpg',
-        'intel-i3-14100': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/I3%20GEN%2014.jpg',
-        'intel-i3-14100f': '/https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/I3%20GEN%2014.jpg',
-        'intel-i3-13100': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/I3%20GEN%2013.jpg',
-        'intel-i3-13100f': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/I3%20GEN%2013.jpg',
-        'amd-ryzen9-7950x3d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900X3D.jpg',
-        'amd-ryzen9-7900x3d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900X3D.jpg',
-        'amd-ryzen9-7950x': 'https://github.com/dzoavhaliebert/NgoprekKompi/blob/main/images/CPU/AMD%20RYZEN%209%207900.jpg?raw=true',
-        'amd-ryzen9-7900x': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900.jpg',
-        'amd-ryzen9-7900': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900.jpg',
-        'amd-ryzen7-7800x3d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%207700X.jpg',
-        'amd-ryzen7-7700x': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%207700X.jpg',
-        'amd-ryzen7-7700': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%207700X.jpg',
-        'amd-ryzen5-7600x': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%205%207600X.jpg',
-        'amd-ryzen5-7600': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CPU/AMD%20RYZEN%205%207600X.jpg'
+        'intel-i9-14900k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I9-14900K.jpg',
+        'intel-i9-14900kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I9-14900K.jpg',
+        'intel-i9-13900k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I9-13900K.jpg',
+        'intel-i9-13900kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I9-13900K.jpg',
+        'intel-i7-14700k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I7-14700K.jpg',
+        'intel-i7-14700kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I7-14700K.jpg',
+        'intel-i7-13700k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I7-13700K.jpg',
+        'intel-i7-13700kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I7-13700K.jpg',
+        'intel-i5-14600k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i5-14600kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i5-13600k': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i5-13600kf': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i5-14400': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i5-14400f': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i5-13400': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i5-13400f': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/CORE%20I5-14600K.jpg',
+        'intel-i3-14100': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/I3%20GEN%2014.jpg',
+        'intel-i3-14100f': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/I3%20GEN%2014.jpg',
+        'intel-i3-13100': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/I3%20GEN%2013.jpg',
+        'intel-i3-13100f': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/I3%20GEN%2013.jpg',
+        'amd-ryzen9-7950x3d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900X3D.jpg',
+        'amd-ryzen9-7900x3d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900X3D.jpg',
+        'amd-ryzen9-7950x': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900.jpg',
+        'amd-ryzen9-7900x': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900.jpg',
+        'amd-ryzen9-7900': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%209%207900.jpg',
+        'amd-ryzen7-7800x3d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%207800X3D.jpg',
+        'amd-ryzen7-7700x': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%207700X.jpg',
+        'amd-ryzen7-7700': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%207700X.jpg',
+        'amd-ryzen5-7600x': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%205%207600X.jpg',
+        'amd-ryzen5-7600': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CPU/AMD%20RYZEN%205%207600X.jpg'
     },
     
     // Motherboard Images
@@ -79,16 +79,16 @@ const ComponentImages = {
     
     // GPU Images (VGA)
     vga: {
-        'nvidia-rtx-4090': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RTX%204090.jpg',
+        'nvidia-rtx-4090': '/images/gpu/RTX 4090.jpg',
         'amd-rx-7900-xtx': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RADEON%20RX%207900%20XTX.jpg',
-        'nvidia-rtx-4080-super': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RTX%204080%20SUPER.jpg',
+        'nvidia-rtx-4080-super': '/images/gpu/RTX 4080 SUPER.jpg',
         'amd-rx-7900-xt': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RADEON%20RX%207900%20XTX.jpg',
-        'nvidia-rtx-4070-ti-super': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/GPU/RTX%204070%20TI%20SUPER.jpg',
-        'amd-rx-7800-xt': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RX%207800%20XT.jpg',
-        'nvidia-rtx-4070-super': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RTX%204070%20SUPER.jpg',
-        'amd-rx-7700-xt': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RX%207700%20XT.jpg',
-        'nvidia-rtx-4060-ti': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RTX%204060%20TI.jpg',
-        'amd-rx-7600': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/GPU/RX%207600.jpg'
+        'nvidia-rtx-4070-ti-super': '/images/gpu/RTX 4070 TI SUPER.jpg',
+        'amd-rx-7800-xt': '/images/gpu/RX 7800 XT.jpg',
+        'nvidia-rtx-4070-super': '/images/gpu/RTX 4070 SUPER.jpg',
+        'amd-rx-7700-xt': '/images/gpu/RX 7700 XT.jpg',
+        'nvidia-rtx-4060-ti': '/images/gpu/RTX 4060 TI.jpg',
+        'amd-rx-7600': '/images/gpu/RX 7600.jpg'
     },
     
     // Storage Images (SSD)
@@ -128,25 +128,25 @@ const ComponentImages = {
     
     // Case Images
     case: {
-        'corsair-4000d': 'https://github.com/dzoavhaliebert/NgoprekKompi/blob/main/images/CASE/BASIC%20CASE.jpg?raw=true',
-        'nzxt-h510': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/NZXT%20H510.jpg',
-        'lian-li-lancool-ii-mesh': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/LIAN%20LI%20LANCOOL%20II%20MESH.jpg',
-        'fractal-meshify-c': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/FRACTAL%20MESHIFY.jpg',
-        'basic': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/CASE/BASIC%20CASE.jpg'
+        'corsair-4000d': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/CORSAIR%204000D%20AIRFLOW.jpg',
+        'nzxt-h510': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/NZXT%20H510.jpg',
+        'lian-li-lancool-ii-mesh': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/LIAN%20LI%20LANCOOL%20II%20MESH.jpg',
+        'fractal-meshify-c': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/FRACTAL%20MESHIFY.jpg',
+        'basic': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/CASE/BASIC%20CASE.jpg.jpg'
     },
     
     // Cooling Images
     cooling: {
-        'noctua-nh-d15': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/Noctua-NH-D15.jpg',
-        'deepcool-ak620': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/DEEPCOOL%20AK620.jpg',
-        'thermalright-phantom-spirit-120-se': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/TERMALRIGHT.jpg',
-        'bequiet-dark-rock-pro-4': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/BE%20QUIET%20DARK.jpg',
-        'cooler-master-hyper-212-halo': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/COOLER%20MASTER%20HYPER%20212.jpg',
-        'arctic-liquid-freezer-ii-360': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/ARTIC%20LIQUID.jpg',
-        'lian-li-galahad-ii-trinity-360': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/LIAN%20LI%20GALAHAD.jpg',
-        'deepcool-ls720-se-360': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/DEEPCOOL%20LS720.jpg',
-        'nzxt-kraken-360': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/NZXT%20KRAKEN.jpg',
-        'corsair-icue-h150i-elite-360': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi/refs/heads/main/images/COOL/CORSAIR%20ICUE%20H150%20ELITE.jpg'
+        'noctua-nh-d15': '/images/cool/Noctua-NH-D15.jpg',
+        'deepcool-ak620': '/images/cool/DEEPCOOL AK620.jpg',
+        'thermalright-phantom-spirit-120-se': '/images/cool/TERMALRIGHT.jpg',
+        'bequiet-dark-rock-pro-4': '/images/cool/BE QUIET DARK.jpg',
+        'cooler-master-hyper-212-halo': '/images/cool/COOLER MASTER HYPER 212.jpg',
+        'arctic-liquid-freezer-ii-360': '/images/cool/ARTIC LIQUID.jpg',
+        'lian-li-galahad-ii-trinity-360': '/images/cool/LIAN LI GALAHAD.jpg',
+        'deepcool-ls720-se-360': '/images/cool/DEEPCOOL LS720.jpg',
+        'nzxt-kraken-360': '/images/cool/NZXT KRAKEN.jpg',
+        'corsair-icue-h150i-elite-360': '/images/cool/CORSAIR ICUE H150 ELITE.jpg'
     },
     
     // OS Images
