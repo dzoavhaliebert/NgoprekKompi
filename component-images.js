@@ -38,19 +38,19 @@ const ComponentImages = {
     
     // Motherboard Images
     mb: {
-        'asus-prime-z790-a-wifi': '/images/mb/ASUS PRIME Z790 (2).jpg',
-        'msi-pro-z790-p-wifi': '/images/mb/MSI PRO Z790 P.jpg',
-        'gigabyte-z790-aorus-elite-ax': '/images/mb/GIGABYTE Z790 AORUS ELITE.jpg',
-        'asrock-z790-pro-rs': '/images/mb/ASROCK Z790 PRO RS.jpg',
-        'asus-tuf-b760-plus-wifi': '/images/mb/ASUS TUF B760-PLUS.jpg',
-        'msi-pro-b760m-a-wifi': '/images/mb/MSI PRO B760M.jpg',
-        'gigabyte-b760m-ds3h': '/images/mb/MSI PRO B760M.jpg',
-        'msi-mpg-x670e-carbon-wifi': '/images/mb/MSI MPG X670E CARBON .jpg',
-        'asus-rog-crosshair-x670e-hero': '/images/mb/ROG CROSSHAIR X670E.jpg',
-        'asus-rog-strix-b650-a-gaming-wifi': '/images/mb/ASUS ROG STRIX B650.jpg',
-        'msi-mag-b650-tomahawk-wifi': '/images/mb/MSI MAG B650 TOMAHAWK.jpg',
-        'gigabyte-b650-gaming-x-ax': '/images/mb/GIGABYTE B650 GAMING.jpg',
-        'asrock-b650-live-mixer': '/images/mb/ASROCK B650 LIVE.jpg'
+        'asus-prime-z790-a-wifi': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/ASUS%20PRIME%20Z790%20(2).jpg',
+        'msi-pro-z790-p-wifi': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/MSI%20PRO%20Z790%20P.jpg',
+        'gigabyte-z790-aorus-elite-ax': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/GIGABYTE%20Z790%20AORUS%20ELITE.jpg',
+        'asrock-z790-pro-rs': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/ASROCK%20Z790%20PRO%20RS.jpg',
+        'asus-tuf-b760-plus-wifi': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/ASUS%20TUF%20B760-PLUS.jpg',
+        'msi-pro-b760m-a-wifi': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/MSI%20PRO%20B760M.jpg',
+        'gigabyte-b760m-ds3h': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/GIGABYTE%20B760M.jpg',
+        'msi-mpg-x670e-carbon-wifi': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/MSI%20MPG%20X670E%20CARBON%20.jpg',
+        'asus-rog-crosshair-x670e-hero': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/ROG%20CROSSHAIR%20X670E.jpg',
+        'asus-rog-strix-b650-a-gaming-wifi': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/ASUS%20ROG%20STRIX%20B650.jpg',
+        'msi-mag-b650-tomahawk-wifi': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/MSI%20MAG%20B650%20TOMAHAWK.jpg',
+        'gigabyte-b650-gaming-x-ax': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/GIGABYTE%20B650%20GAMING.jpg',
+        'asrock-b650-live-mixer': 'https://raw.githubusercontent.com/dzoavhaliebert/NgoprekKompi-main/refs/heads/main/images/MB/ASROCK%20B650%20LIVE.jpg'
     },
     
     // RAM Images
