@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangun PC - Rekomendasi</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="rekomendasi.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span>NgoPi</span>
+            </div>
+            <div class="nav-links">
+                <a href="home.html">Home</a>
+                <a href="rakitpc.html">Rakit PC</a>
+                <a href="rekomendasi.html">Rekomendasi</a>
+                <a href="disclaimer.html">Disclaimer</a>
+                <a href="kontak.html">Kontak</a>
+            </div>
+            <div class="nav-actions">
+            </div>
+        </div>
+    </nav>
+
+    <!-- RECOMMENDATIONS SECTION -->
+    <div id="recommend" class="section active">
+        <div class="section-header">
+            <h2>Rekomendasi Build PC</h2>
+            <p>Konfigurasi siap pakai untuk berbagai kebutuhan dan budget</p>
+        </div>
+        
+        <div class="preset-grid">
+            <div class="preset-card" onclick="loadPreset('office')">
+                <div class="preset-image">
+                    <svg viewBox="0 0 200 150" class="component-illustration">
+                        <rect x="40" y="40" width="120" height="70" rx="6" fill="#059669" opacity="0.2"/>
+                        <rect x="50" y="50" width="100" height="50" rx="4" fill="#10B981" opacity="0.3"/>
+                        <line x1="70" y1="65" x2="130" y2="65" stroke="#34D399" stroke-width="3"/>
+                        <line x1="70" y1="80" x2="110" y2="80" stroke="#6EE7B7" stroke-width="3"/>
+                        <line x1="70" y1="95" x2="120" y2="95" stroke="#6EE7B7" stroke-width="3"/>
+                        <text x="100" y="140" text-anchor="middle" fill="#059669" font-size="12" font-weight="bold">OFFICE</text>
+                    </svg>
+                </div>
+                <div class="preset-badge">Business</div>
+                <h3>Produktivitas Kantor</h3>
+                <div class="preset-specs">
+                    <p>• Intel Core i3-14100</p>
+                    <p>• Integrated Graphics</p>
+                    <p>• 16GB DDR4 RAM</p>
+                    <p>• 1TB SSD</p>
+                </div>
+                <div class="preset-price">Rp 9.100.000</div>
+                <button class="btn-preset">Muat Konfigurasi</button>
+            </div>
+
+            <div class="preset-card" onclick="loadPreset('school')">
+                <div class="preset-image">
+                    <svg viewBox="0 0 200 150" class="component-illustration">
+                        <rect x="40" y="40" width="120" height="70" rx="6" fill="#8B5CF6" opacity="0.2"/>
+                        <rect x="50" y="50" width="100" height="50" rx="4" fill="#A78BFA" opacity="0.3"/>
+                        <circle cx="75" cy="70" r="8" fill="#C4B5FD"/>
+                        <circle cx="100" cy="70" r="8" fill="#C4B5FD"/>
+                        <circle cx="125" cy="70" r="8" fill="#C4B5FD"/>
+                        <rect x="70" y="85" width="60" height="4" fill="#DDD6FE"/>
+                        <text x="100" y="140" text-anchor="middle" fill="#8B5CF6" font-size="12" font-weight="bold">SCHOOL</text>
+                    </svg>
+                </div>
+                <div class="preset-badge">Education</div>
+                <h3>PC Sekolah / Belajar</h3>
+                <div class="preset-specs">
+                    <p>• Intel Core i3-14100F</p>
+                    <p>• Integrated Graphics</p>
+                    <p>• 16GB DDR4 RAM</p>
+                    <p>• 1TB SSD</p>
+                </div>
+                <div class="preset-price">Rp 8.600.000</div>
+                <button class="btn-preset">Muat Konfigurasi</button>
+            </div>
+
+            <div class="preset-card" onclick="loadPreset('budget')">
+                <div class="preset-image">
+                    <svg viewBox="0 0 200 150" class="component-illustration">
+                        <rect x="30" y="35" width="140" height="80" rx="6" fill="#F59E0B" opacity="0.2"/>
+                        <circle cx="100" cy="75" r="25" fill="#FBBF24" opacity="0.4"/>
+                        <path d="M100 60 L110 75 L100 90 L90 75 Z" fill="#FCD34D"/>
+                        <circle cx="70" cy="75" r="10" fill="#FDE68A" opacity="0.6"/>
+                        <circle cx="130" cy="75" r="10" fill="#FDE68A" opacity="0.6"/>
+                        <text x="100" y="135" text-anchor="middle" fill="#F59E0B" font-size="12" font-weight="bold">BUDGET</text>
+                    </svg>
+                </div>
+                <div class="preset-badge">Budget</div>
+                <h3>Entry Level Gaming</h3>
+                <div class="preset-specs">
+                    <p>• AMD Ryzen 5 7600</p>
+                    <p>• RX 7600</p>
+                    <p>• 16GB DDR5 RAM</p>
+                    <p>• 1TB SSD</p>
+                </div>
+                <div class="preset-price">Rp 18.900.000</div>
+                <button class="btn-preset">Muat Konfigurasi</button>
+            </div>
+
+            <div class="preset-card" onclick="loadPreset('gaming')">
+                <div class="preset-image">
+                    <svg viewBox="0 0 200 150" class="component-illustration">
+                        <rect x="20" y="30" width="160" height="90" rx="8" fill="#1E3A8A" opacity="0.2"/>
+                        <rect x="30" y="40" width="140" height="70" rx="4" fill="#3B82F6" opacity="0.3"/>
+                        <circle cx="100" cy="75" r="20" fill="#60A5FA"/>
+                        <rect x="60" y="65" width="80" height="20" rx="4" fill="#93C5FD" opacity="0.5"/>
+                        <text x="100" y="130" text-anchor="middle" fill="#3B82F6" font-size="12" font-weight="bold">GPU</text>
+                    </svg>
+                </div>
+                <div class="preset-badge">Gaming</div>
+                <h3>Gaming Performa Tinggi</h3>
+                <div class="preset-specs">
+                    <p>• Intel i5-14600K</p>
+                    <p>• RTX 4070 SUPER</p>
+                    <p>• 32GB DDR5 RAM</p>
+                    <p>• 1TB NVMe Gen4</p>
+                </div>
+                <div class="preset-price">Rp 29.050.000</div>
+                <button class="btn-preset">Muat Konfigurasi</button>
+            </div>
+
+            <div class="preset-card" onclick="loadPreset('editing')">
+                <div class="preset-image">
+                    <svg viewBox="0 0 200 150" class="component-illustration">
+                        <rect x="20" y="20" width="160" height="110" rx="8" fill="#7C3AED" opacity="0.2"/>
+                        <rect x="30" y="30" width="70" height="90" rx="4" fill="#8B5CF6" opacity="0.4"/>
+                        <rect x="110" y="30" width="70" height="90" rx="4" fill="#A78BFA" opacity="0.4"/>
+                        <circle cx="65" cy="75" r="15" fill="#C4B5FD"/>
+                        <circle cx="145" cy="75" r="15" fill="#C4B5FD"/>
+                        <text x="100" y="145" text-anchor="middle" fill="#7C3AED" font-size="12" font-weight="bold">CPU</text>
+                    </svg>
+                </div>
+                <div class="preset-badge">Professional</div>
+                <h3>Content Creation</h3>
+                <div class="preset-specs">
+                    <p>• AMD Ryzen 9 7900X</p>
+                    <p>• RTX 4080 SUPER</p>
+                    <p>• 32GB DDR5 RAM</p>
+                    <p>• 1TB Gen4 SSD</p>
+                </div>
+                <div class="preset-price">Rp 45.600.000</div>
+                <button class="btn-preset">Muat Konfigurasi</button>
+            </div>
+
+            <div class="preset-card" onclick="loadPreset('server')">
+                <div class="preset-image">
+                    <svg viewBox="0 0 200 150" class="component-illustration">
+                        <rect x="30" y="30" width="140" height="25" rx="4" fill="#06B6D4" opacity="0.3"/>
+                        <rect x="30" y="60" width="140" height="25" rx="4" fill="#06B6D4" opacity="0.5"/>
+                        <rect x="30" y="90" width="140" height="25" rx="4" fill="#06B6D4" opacity="0.7"/>
+                        <circle cx="45" cy="42" r="4" fill="#22D3EE"/>
+                        <circle cx="60" cy="42" r="4" fill="#22D3EE"/>
+                        <circle cx="45" cy="72" r="4" fill="#22D3EE"/>
+                        <circle cx="60" cy="72" r="4" fill="#22D3EE"/>
+                        <circle cx="45" cy="102" r="4" fill="#22D3EE"/>
+                        <circle cx="60" cy="102" r="4" fill="#22D3EE"/>
+                        <text x="100" y="135" text-anchor="middle" fill="#06B6D4" font-size="12" font-weight="bold">SERVER</text>
+                    </svg>
+                </div>
+                <div class="preset-badge">Workstation</div>
+                <h3>Server / Workstation</h3>
+                <div class="preset-specs">
+                    <p>• AMD Ryzen 9 7900</p>
+                    <p>• No GPU (Integrated)</p>
+                    <p>• 32GB DDR5 RAM</p>
+                    <p>• 1TB Gen4 SSD</p>
+                </div>
+                <div class="preset-price">Rp 21.950.000</div>
+                <button class="btn-preset">Muat Konfigurasi</button>
+            </div>
+        </div>
+
+        <!-- Component Guide Section -->
+        <div class="component-guide-section">
+            <h2 class="section-title-modern">Panduan Komponen PC</h2>
+            <p class="section-description">Memahami fungsi setiap komponen dalam sistem PC Anda</p>
+            
+            <div class="components-grid">
+                <div class="component-guide-card">
+                    <div class="component-icon-large">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <rect x="10" y="10" width="80" height="80" rx="8" fill="#3B82F6" opacity="0.2"/>
+                            <rect x="20" y="20" width="60" height="60" rx="4" fill="#3B82F6" opacity="0.4"/>
+                            <circle cx="50" cy="50" r="15" fill="#60A5FA"/>
+                            <line x1="35" y1="50" x2="45" y2="50" stroke="white" stroke-width="2"/>
+                            <line x1="55" y1="50" x2="65" y2="50" stroke="white" stroke-width="2"/>
+                            <line x1="50" y1="35" x2="50" y2="45" stroke="white" stroke-width="2"/>
+                            <line x1="50" y1="55" x2="50" y2="65" stroke="white" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Processor (CPU)</h3>
+                    <p>Otak dari komputer yang memproses semua instruksi. CPU yang lebih cepat menghasilkan performa sistem yang lebih responsif.</p>
+                </div>
+
+                <div class="component-guide-card">
+                    <div class="component-icon-large">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <rect x="5" y="20" width="90" height="60" rx="4" fill="#8B5CF6" opacity="0.2"/>
+                            <rect x="15" y="30" width="70" height="40" rx="3" fill="#8B5CF6" opacity="0.4"/>
+                            <rect x="25" y="40" width="15" height="20" fill="#A78BFA"/>
+                            <rect x="45" y="40" width="15" height="20" fill="#A78BFA"/>
+                            <rect x="65" y="40" width="15" height="20" fill="#A78BFA"/>
+                        </svg>
+                    </div>
+                    <h3>Motherboard</h3>
+                    <p>Papan sirkuit utama yang menghubungkan semua komponen. Harus kompatibel dengan socket CPU yang dipilih.</p>
+                </div>
+
+                <div class="component-guide-card">
+                    <div class="component-icon-large">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <rect x="20" y="15" width="60" height="70" rx="4" fill="#10B981" opacity="0.2"/>
+                            <rect x="30" y="25" width="40" height="50" rx="3" fill="#10B981" opacity="0.4"/>
+                            <rect x="35" y="35" width="30" height="8" fill="#34D399"/>
+                            <rect x="35" y="48" width="30" height="8" fill="#34D399"/>
+                            <rect x="35" y="61" width="30" height="8" fill="#34D399"/>
+                        </svg>
+                    </div>
+                    <h3>Memory (RAM)</h3>
+                    <p>Penyimpanan sementara untuk data yang sedang diproses. RAM lebih banyak memungkinkan multitasking lebih lancar.</p>
+                </div>
+
+                <div class="component-guide-card">
+                    <div class="component-icon-large">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <rect x="15" y="25" width="70" height="50" rx="6" fill="#EF4444" opacity="0.2"/>
+                            <rect x="25" y="35" width="50" height="30" rx="4" fill="#EF4444" opacity="0.4"/>
+                            <circle cx="35" cy="50" r="5" fill="#FCA5A5"/>
+                            <circle cx="50" cy="50" r="5" fill="#FCA5A5"/>
+                            <circle cx="65" cy="50" r="5" fill="#FCA5A5"/>
+                            <rect x="35" y="15" width="30" height="8" fill="#F87171" opacity="0.6"/>
+                        </svg>
+                    </div>
+                    <h3>Graphics Card (GPU)</h3>
+                    <p>Memproses grafis dan visual. Sangat penting untuk gaming dan rendering video dengan kualitas tinggi.</p>
+                </div>
+
+                <div class="component-guide-card">
+                    <div class="component-icon-large">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <rect x="25" y="30" width="50" height="40" rx="3" fill="#F59E0B" opacity="0.2"/>
+                            <rect x="30" y="35" width="40" height="30" rx="2" fill="#F59E0B" opacity="0.4"/>
+                            <circle cx="50" cy="50" r="8" fill="#FBBF24"/>
+                            <path d="M50 42 L54 50 L50 58 L46 50 Z" fill="#FCD34D"/>
+                        </svg>
+                    </div>
+                    <h3>Storage (SSD)</h3>
+                    <p>Menyimpan sistem operasi, program, dan file. SSD jauh lebih cepat dari HDD tradisional.</p>
+                </div>
+
+                <div class="component-guide-card">
+                    <div class="component-icon-large">
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <rect x="20" y="25" width="60" height="50" rx="4" fill="#06B6D4" opacity="0.2"/>
+                            <rect x="30" y="35" width="40" height="30" rx="3" fill="#06B6D4" opacity="0.4"/>
+                            <line x1="40" y1="50" x2="60" y2="50" stroke="#22D3EE" stroke-width="3"/>
+                            <circle cx="40" cy="50" r="4" fill="#67E8F9"/>
+                            <circle cx="60" cy="50" r="4" fill="#67E8F9"/>
+                        </svg>
+                    </div>
+                    <h3>Power Supply (PSU)</h3>
+                    <p>Menyuplai daya ke semua komponen. Watt yang cukup dan efisiensi tinggi sangat penting.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Ngoprek Kompi</h4>
+                <p>Platform simulator perakitan PC terpercaya untuk membantu Anda merakit PC impian dengan mudah dan profesional.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="rakitpc.html">Rakit PC</a></li>
+                    <li><a href="rekomendasi.html">Rekomendasi</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                    <li><a href="kontak.html">Kontak</a></li>
+                </ul>
+            </div>
+           <div class="footer-section">
+                <h4>Kontak</h4>
+                <ul class="kontak">
+                    <li><span class="ikon">📞</span> +62 851 7956 2922</li>
+                    <li><span class="ikon">✉️</span> nedazafa@gmail.com</li>
+                    <li><span class="ikon">📍</span> Jalan Pattimura No. 3, Kelurahan Sumbang, Bojonegoro, Jawa Timur</li>
+                </ul>
+                <style>
+                .kontak .ikon {
+                    filter: hue-rotate(270deg) saturate(3); 
+                }
+                </style>
+
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NgoPi. Dikembangkan oleh NeDazafa. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </footer>
+
+    <script src="translations.js"></script>
+    <script src="language-switcher.js"></script>
+    <script src="utils.js"></script>
+    <script src="builder.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
