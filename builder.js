@@ -1,6 +1,3 @@
-// builder.js - FIXED & ENHANCED VERSION
-// Semua fungsi besar aplikasi dengan perbaikan bug dan fitur tambahan
-
 // ============================================
 // STATE MANAGEMENT
 // ============================================
@@ -36,7 +33,7 @@ function initializeApp() {
         updateBuildList();
         updateTotal();
         
-        // Check for pending preset from recommendation page
+        // Periksa preset yang tertunda dari halaman rekomendasi
         checkPendingPreset();
         
         AppState.isInitialized = true;
@@ -50,11 +47,9 @@ function initializeApp() {
 function attachEventListeners() {
     const selects = document.querySelectorAll('.component-select');
     selects.forEach(select => {
-        // Remove existing listeners to prevent duplicates
         select.replaceWith(select.cloneNode(true));
     });
     
-    // Reattach to cloned elements
     document.querySelectorAll('.component-select').forEach(select => {
         select.addEventListener('change', function() {
             updateTotal();
@@ -1056,7 +1051,7 @@ function generateYoutubeLink(cpu, gpu) {
     let searchQuery = '';
     
     if (cpu && gpu) {
-        // Both CPU and GPU selected - prioritize GPU benchmarks
+        //  CPU dan GPU dipilih - prioritaskan benchmark GPU
         const cpuName = extractComponentName(cpu.name);
         const gpuName = extractComponentName(gpu.name);
         searchQuery = `${cpuName} ${gpuName} benchmark gaming test`;
@@ -1076,18 +1071,15 @@ function generateYoutubeLink(cpu, gpu) {
     return `https://www.youtube.com/results?search_query=${encodeURIComponent(searchQuery)}`;
 }
 
-// Helper function to extract clean component name
 function extractComponentName(fullName) {
-    // Remove price from name (e.g., "Intel Core i5-14600K - Rp 4.800.000")
+    // hapus harga dari nama
     let name = fullName.split('-')[0].trim();
-    
-    // Clean up common patterns
     name = name.replace(/\s+/g, ' ').trim();
     
     return name;
 }
 
-// Generate multiple YouTube links for different scenarios
+// Hasilkan beberapa tautan YouTube untuk skenario yang berbeda
 function generateYoutubeLinks(cpu, gpu, ram) {
     const links = {
         gaming: null,
@@ -1631,9 +1623,15 @@ function resetBuild() {
         });
         
         updateTotal();
+        // TAMBAHKAN BARIS INI:
+        refreshAllPreviews();
+        
         clearCompatibilityDisplay();
         
         showNotification('✓ Build berhasil direset', 'info');
+        
+        const buildSection = document.getElementById('build');
+        if (buildSection) showSection('build');
     } catch (error) {
         console.error('Error resetting build:', error);
         showNotification('Terjadi kesalahan saat reset build', 'error');

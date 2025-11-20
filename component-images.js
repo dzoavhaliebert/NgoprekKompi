@@ -1,6 +1,3 @@
-// component-images.js - Database URL gambar lokal untuk setiap komponen
-// File ini berisi mapping antara value komponen dengan path gambar lokal
-
 const ComponentImages = {
     // CPU Images
     cpu: {

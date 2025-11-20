@@ -414,14 +414,13 @@ window.showErrorState = showErrorState;
 window.loadComponentImage = loadComponentImage;
 window.showBuildSummaryWithImages = showBuildSummaryWithImages;
 // ============================================
-// REFRESH ALL PREVIEWS
+// REFRESH ALL PREVIEWS (PERBAIKAN UTAMA)
 // ============================================
 function refreshAllPreviews() {
     const selects = document.querySelectorAll('.component-select');
     selects.forEach(select => {
-        if (select.value) {
-            handleComponentSelection(select);
-        }
+        // Selalu panggil handleComponentSelection, bahkan untuk select kosong (untuk placeholder)
+        handleComponentSelection(select);
     });
 }
 

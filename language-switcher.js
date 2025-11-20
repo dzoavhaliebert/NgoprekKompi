@@ -15,7 +15,7 @@ function initializeLanguageSwitcher() {
         addLanguageSwitcherToNavbar();
         applyLanguage(LanguageState.currentLang);
         LanguageState.initialized = true;
-        console.log('✓ Language switcher initialized. Current language:', LanguageState.currentLang);
+        console.log('Language switcher initialized. Current language:', LanguageState.currentLang);
     } catch (error) {
         console.error('Error initializing language switcher:', error);
     }
@@ -144,7 +144,7 @@ function switchLanguage(lang) {
             
             hideLoading();
             showNotification(
-                lang === 'id' ? '✓ Bahasa berhasil diganti' : '✓ Language successfully changed',
+                lang === 'id' ? 'Bahasa berhasil diganti' : 'Language successfully changed',
                 'success'
             );
             
